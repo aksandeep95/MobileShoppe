@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBaseModelStoreContainer" CdmEntityContainer="DBaseEntities1">
+    <EntitySetMapping Name="mobiles">
+      <EntityTypeMapping TypeName="DBaseModel.mobile">
+        <MappingFragment StoreEntitySet="mobiles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mobile1" ColumnName="mobile" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

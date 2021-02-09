@@ -1,0 +1,43 @@
+﻿@model IEnumerable <WebPage11.Models.mobile>
+
+@{
+    ViewBag.Title = "showmobile";
+}
+
+<h2>showmobile</h2>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped table-hover table-responsive"  >
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(obj=>obj.id)</th>
+                    <th>@Html.DisplayNameFor(obj=>obj.mobile1)</th>
+                    <th>@Html.DisplayNameFor(obj=>obj.model)</th>
+                    <th>@Html.DisplayNameFor(obj=>obj.price)</th>
+                    <th>@Html.DisplayNameFor(obj=>obj.description)</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@Html.DisplayFor(obj=>item.id)</td>
+                    <td>@Html.DisplayFor(obj => item.mobile1)</td>
+                    <td>@Html.DisplayFor(obj => item.model)</td>
+                    <td>@Html.DisplayFor(obj => item.price)</td>
+                    <td>@Html.DisplayFor(obj => item.description)</td>
+                    <td>@Html.ActionLink("Edit","editmobile",new { id = item.id })</td>
+                    <td>@Html.ActionLink("Delete","deletemobile",new { id=item.id})</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
